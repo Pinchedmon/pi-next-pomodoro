@@ -32,7 +32,7 @@ export const Timer: React.FC<Props> = ({ state }) => {
     if (isRunning && timer > 0) {
       intervalId = setInterval(() => {
         setTimer((prevTimer) => prevTimer - 1);
-      }, 10);
+      }, 1000);
     }
     return () => clearInterval(intervalId);
   }, [isRunning, timer]);
