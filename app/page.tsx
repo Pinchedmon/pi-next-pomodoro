@@ -2,6 +2,7 @@ import Pointer from "@/components/pointer";
 import Pomodoro from "@/components/pomodoro";
 
 import Image from "next/image";
+
 export default function Page() {
   return (
     <div className="relative min-h-screen overflow-hidden">

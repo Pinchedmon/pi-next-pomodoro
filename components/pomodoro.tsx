@@ -6,6 +6,7 @@ import { TimeState } from "@/types/time";
 import { timeReducer } from "@/lib/timeReducer";
 import { Settings as SettingIcon, X } from "lucide-react";
 import Settings from "./settings";
+import CricketAnimationButton from "@/components/start-button";
 
 const Pomodoro = () => {
   const initialState: TimeState = { session: 25, relax: 5 };

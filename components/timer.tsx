@@ -1,5 +1,6 @@
 import { TimeState } from "@/types/time";
 import React, { useEffect, useState } from "react";
+import CricketAnimationButton from "@/components/start-button";
 
 interface Props {
   state: TimeState;
@@ -71,13 +72,9 @@ export const Timer: React.FC<Props> = ({ state }) => {
       >
         {formatTime(timer)}
       </button>
+
       <div className="flex justify-between gap-4">
-        <button
-          className="text-white box-border h-12 w-full font-bold bg-white/10 rounded-xl border-4 border-transparent  hover:border-white/20 "
-          onClick={() => handleToggle()}
-        >
-          {isRunning ? "Стоп" : "Старт"}
-        </button>
+        <CricketAnimationButton handleToggle={handleToggle} isRunning={isRunning} />
         <button
           className="text-white box-border h-12 w-full font-bold bg-white/10 rounded-xl border-4 border-transparent  hover:border-white/20 "
           onClick={() => resetTimer()}
